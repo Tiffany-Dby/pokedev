@@ -1,0 +1,13 @@
+@use "../../../../shared/assets/styles/mixins" as *;
+
+.game-rules {
+  &__container {
+    position: relative;
+    overflow-x: hidden;
+
+    > article {
+      @include flex("column", "nowrap");
+      gap: 1rem;
+    }
+  }
+}

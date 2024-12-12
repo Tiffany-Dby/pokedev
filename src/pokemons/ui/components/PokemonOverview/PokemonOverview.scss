@@ -1,0 +1,25 @@
+@use "../../../../shared/assets/styles/mixins" as *;
+
+.pokemon-overview {
+  @include flex("column", "nowrap");
+  @include pos;
+  gap: 1rem;
+  padding: var(--padding-s);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-1-1-10);
+  text-align: center;
+  width: 135px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--white);
+  cursor: pointer;
+  transition: scale 0.5s ease;
+
+  &:hover {
+    scale: 1.1;
+  }
+
+  &__img {
+    max-width: 75px;
+    overflow: hidden;
+  }
+}

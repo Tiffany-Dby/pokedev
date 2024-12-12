@@ -1,0 +1,30 @@
+@use "../../../assets//styles/mixins" as *;
+
+.input {
+  padding: var(--padding-xs) var(--padding-s);
+  border-radius: var(--radius-m);
+  transition: all 0.3s ease;
+
+  &:focus-within {
+    color: var(--primary);
+  }
+
+  &::placeholder {
+    font-style: italic;
+  }
+
+  &__wrapper {
+    @include flex("column", "nowrap");
+    gap: 0.5rem;
+
+    &:focus-within label {
+      color: var(--primary);
+      font-weight: var(--fw-medium);
+      transform: translate(0.25rem, 0.25rem);
+    }
+  }
+
+  &__label {
+    transition: all 0.3s ease;
+  }
+}

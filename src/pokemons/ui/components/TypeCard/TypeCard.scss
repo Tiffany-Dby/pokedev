@@ -1,0 +1,23 @@
+@use "../../../../shared/assets/styles/mixins" as *;
+
+.type-card {
+  @include flex("column", "nowrap");
+  @include pos("space-between");
+  padding: var(--padding-s);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-1-1-10);
+  text-align: center;
+  width: 100px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--white);
+  transition: scale 0.5s ease;
+
+  &:hover {
+    scale: 1.1;
+  }
+
+  &__img {
+    max-width: 50px;
+    overflow: hidden;
+  }
+}

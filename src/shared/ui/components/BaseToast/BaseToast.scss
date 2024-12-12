@@ -1,0 +1,44 @@
+@use "../../../../shared/assets/styles/mixins" as *;
+
+.toast {
+  position: absolute;
+  z-index: 5;
+  top: 1rem;
+  right: 1rem;
+  @include flex("column", "nowrap");
+  max-width: fit-content;
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-1-1-10);
+  animation: slide--left 0.8s ease;
+  background-color: rgb(255, 235, 235);
+  border: 1px solid rgba(255, 104, 104, 0.25);
+
+  &__header {
+    @include flex($wrap: "nowrap");
+    @include pos("space-between");
+    padding: var(--padding-s) var(--padding-m);
+    border-bottom: 1px solid rgba(255, 104, 104, 0.25);
+
+    &:has(.btn) .btn {
+      max-width: fit-content;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  &__message {
+    padding: var(--padding-l) var(--padding-m);
+  }
+}
+
+@keyframes slide--left {
+  0% {
+    opacity: 0;
+    right: -100%;
+  }
+  100% {
+    opacity: 1;
+    right: 1rem;
+  }
+}

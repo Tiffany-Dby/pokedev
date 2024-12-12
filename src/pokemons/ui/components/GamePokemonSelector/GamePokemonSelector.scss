@@ -1,0 +1,20 @@
+@use "../../../../shared/assets/styles/mixins" as *;
+
+.game-rules {
+  form {
+    @include flex("column", "nowrap");
+    gap: 1rem;
+
+    .btn {
+      @include btn(var(--primary), var(--white), var(--primary100));
+    }
+  }
+}
+
+.pokemon-pull {
+  &__list {
+    @include flex;
+    @include pos("space-between");
+    gap: 1rem;
+  }
+}

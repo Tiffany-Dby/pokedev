@@ -1,0 +1,16 @@
+@use "../../../../shared/assets/styles/mixins" as *;
+
+.types {
+  display: flex;
+  flex: 1 0;
+
+  &__types {
+    @include flex;
+    @include pos;
+    gap: 1rem;
+
+    a {
+      color: var(--black);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@mixin container($width: "800px", $padding: var(--padding-l)) {
+  width: 100%;
+  margin: 0 auto;
+  max-width: #{$width};
+  padding: #{$padding};
+}
+
+@mixin flex($direction: "row", $wrap: "wrap") {
+  display: flex;
+  flex-wrap: #{$wrap};
+  flex-direction: #{$direction};
+}
+
+@mixin pos($jc: "center", $ai: "center") {
+  align-items: #{$ai};
+  justify-content: #{$jc};
+}
+
+@mixin btn(
+  $bgc: var(--accent),
+  $color: var(--primary100),
+  $borderColor: var(--primary100),
+  $padding: var(--padding-s) var(--padding-m)
+) {
+  background-color: #{$bgc};
+  color: #{$color};
+  padding: #{$padding};
+
+  &:hover {
+    border-color: #{$borderColor};
+  }
+}

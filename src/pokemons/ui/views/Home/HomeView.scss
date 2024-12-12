@@ -1,0 +1,44 @@
+@use "../../../../shared/assets/styles/mixins" as *;
+
+.random-team {
+  &__pokemons {
+    @include flex;
+    @include pos;
+    column-gap: 1rem;
+    row-gap: 2rem;
+
+    @media screen and (min-width: 490px) {
+      justify-content: space-evenly;
+    }
+
+    @media screen and (min-width: 710px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__pokemon {
+    @include flex("column", "nowrap");
+
+    &,
+    a {
+      width: fit-content;
+    }
+  }
+
+  h2 a {
+    color: var(--black);
+  }
+}
+
+.random-type {
+  &__types {
+    @include flex;
+    @include pos;
+    column-gap: 1rem;
+    row-gap: 2rem;
+  }
+
+  a {
+    color: var(--black);
+  }
+}
