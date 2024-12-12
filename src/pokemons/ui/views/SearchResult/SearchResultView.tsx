@@ -4,7 +4,6 @@ import { useSearchParams } from "react-router";
 import PokemonDetails from "@/pokemons/ui/components/PokemonDetails/PokemonDetails";
 
 const SearchResultView = () => {
-  console.log("hello");
   const [searchParams] = useSearchParams();
   const query = searchParams.get("search");
 
