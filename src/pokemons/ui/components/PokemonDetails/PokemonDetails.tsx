@@ -2,6 +2,7 @@ import useGetTypes from "@/pokemons/hooks/useGetTypes";
 import { PokemonAPI, StatKey } from "@/pokemons/types/PokemonAPI";
 import { APP_ROUTES } from "@/shared/constants/routes";
 import { Link } from "react-router";
+import "./PokemonDetails.scss";
 
 const PokemonDetails = ({ pokemon }: { pokemon: PokemonAPI }) => {
   const { types, isLoading, typesError } = useGetTypes();

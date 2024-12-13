@@ -14,7 +14,11 @@
 .pokemon-pull {
   &__list {
     @include flex;
-    @include pos("space-between");
+    @include pos;
     gap: 1rem;
+
+    @media screen and (min-width: 755px) {
+      justify-content: space-between;
+    }
   }
 }

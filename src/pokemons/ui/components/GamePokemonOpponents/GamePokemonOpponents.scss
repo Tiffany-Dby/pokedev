@@ -9,9 +9,14 @@
   }
 
   &__opponents {
-    @include container("500px");
-    @include flex;
+    @include container("500px", var(--padding-m) 0);
+    @include flex("column", "nowrap");
     @include pos("space-between");
+    gap: 1.5rem;
+
+    @media screen and (min-width: 400px) {
+      flex-direction: row;
+    }
 
     > section {
       display: flex;
@@ -32,7 +37,7 @@
     }
 
     &--slide-left {
-      align-items: end;
+      // align-items: end;
       opacity: 0;
       animation: slide--left 0.8s 1s ease forwards;
     }

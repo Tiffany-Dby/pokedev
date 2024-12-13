@@ -23,7 +23,13 @@
       max-width: fit-content;
       border: 0;
       background-color: transparent;
+      padding: 0;
       cursor: pointer;
+
+      &:hover {
+        scale: 1.2;
+        box-shadow: none;
+      }
     }
   }
 
