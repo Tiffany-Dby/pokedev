@@ -27,7 +27,12 @@ const useGetRandomTeam = () => {
     handleGetRandomTeam();
   }, []);
 
-  return { randomTeam, isLoading, teamError };
+  return {
+    randomTeam,
+    isLoading,
+    teamError,
+    refreshRandomTeam: handleGetRandomTeam,
+  };
 };
 
 export default useGetRandomTeam;

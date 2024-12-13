@@ -3,7 +3,10 @@ import { PokemonAPI } from "../types/PokemonAPI";
 import { randomNumberFromInterval } from "@/shared/utils/random";
 import { Toast } from "@/shared/types/Toast";
 
-const usePokemonGame = (randomTeam: PokemonAPI[] | null) => {
+const usePokemonGame = (
+  randomTeam: PokemonAPI[] | null,
+  refreshRandomTeam: () => void
+) => {
   const [chosenPokemon, setChosenPokemon] = useState<PokemonAPI | null>(null);
   const [chosenHp, setChosenHp] = useState(0);
   const [randomPokemon, setRandomPokemon] = useState<PokemonAPI | null>(null);
@@ -22,6 +25,7 @@ const usePokemonGame = (randomTeam: PokemonAPI[] | null) => {
       messages: [],
       isVisible: false,
     });
+    refreshRandomTeam();
   };
 
   const calculateDamage = (

@@ -5,7 +5,13 @@ import GamePokemonSelector from "@/pokemons/ui/components/GamePokemonSelector/Ga
 import GamePokemonOpponents from "@/pokemons/ui/components/GamePokemonOpponents/GamePokemonOpponents";
 import "./GameBoard.scss";
 
-const GameBoard = ({ randomTeam }: { randomTeam: PokemonAPI[] | null }) => {
+const GameBoard = ({
+  randomTeam,
+  refreshRandomTeam,
+}: {
+  randomTeam: PokemonAPI[] | null;
+  refreshRandomTeam: () => void;
+}) => {
   const {
     chosenPokemon,
     chosenHp,
@@ -15,7 +21,7 @@ const GameBoard = ({ randomTeam }: { randomTeam: PokemonAPI[] | null }) => {
     resetGame,
     startGame,
     setToast,
-  } = usePokemonGame(randomTeam);
+  } = usePokemonGame(randomTeam, refreshRandomTeam);
 
   return (
     <>

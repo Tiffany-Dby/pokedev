@@ -3,11 +3,14 @@ import GameBoard from "@/pokemons/ui/components/GameBoard/GameBoard";
 import useGetRandomTeam from "@/pokemons/hooks/useGetRandomTeam";
 
 const GameView = () => {
-  const { randomTeam } = useGetRandomTeam();
+  const { randomTeam, refreshRandomTeam } = useGetRandomTeam();
 
   return (
     <BaseLayout>
-      <GameBoard randomTeam={randomTeam} />
+      <GameBoard
+        randomTeam={randomTeam}
+        refreshRandomTeam={refreshRandomTeam}
+      />
     </BaseLayout>
   );
 };
