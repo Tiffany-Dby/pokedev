@@ -3,6 +3,7 @@ import BaseButton from "@/shared/ui/components/BaseButton/BaseButton";
 import BaseInput from "@/shared/ui/components/BaseInput/BaseInput";
 import { useNavigate } from "react-router";
 import "./SearchPokemonForm.scss";
+import { capitalize } from "@/shared/utils/string";
 
 const SearchPokemonForm = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const SearchPokemonForm = () => {
     const currentTarget = e.target as HTMLFormElement;
     const query = currentTarget.search?.value || "";
 
-    navigate(`${APP_ROUTES.SEARCH}?search=${query}`);
+    navigate(`${APP_ROUTES.SEARCH}?search=${capitalize(query)}`);
   };
 
   return (

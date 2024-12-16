@@ -2,12 +2,13 @@ import useGetPokemon from "@/pokemons/hooks/useGetPokemon";
 import BaseLayout from "@/shared/ui/components/BaseLayout/BaseLayout";
 import { useSearchParams } from "react-router";
 import PokemonDetails from "@/pokemons/ui/components/PokemonDetails/PokemonDetails";
+import { capitalize } from "@/shared/utils/string";
 
 const SearchResultView = () => {
   const [searchParams] = useSearchParams();
-  const query = searchParams.get("search");
+  const query = searchParams.get("search") ?? "";
 
-  const { pokemon, isLoading, pokemonError } = useGetPokemon(query);
+  const { pokemon, isLoading, pokemonError } = useGetPokemon(capitalize(query));
 
   return (
     <BaseLayout>
