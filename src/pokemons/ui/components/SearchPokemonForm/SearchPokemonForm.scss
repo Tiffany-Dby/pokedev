@@ -1,10 +1,20 @@
 @use "../../../../shared/assets/styles/mixins" as *;
 
 .search-pokemon {
+  &__wrapper {
+    width: 100%;
+
+    @media screen and (min-width: 360px) {
+      display: flex;
+      justify-content: end;
+    }
+  }
+
   &__inputs {
     display: flex;
     border: 1px solid var(--black);
     border-radius: var(--radius-l);
+    width: 100%;
   }
 
   .input {
@@ -12,6 +22,14 @@
     border-bottom-right-radius: 0;
     width: 100%;
     border: 2px solid transparent;
+
+    &__wrapper {
+      width: 100%;
+
+      @media screen and (min-width: 360px) {
+        min-width: 220px;
+      }
+    }
   }
 
   .btn {

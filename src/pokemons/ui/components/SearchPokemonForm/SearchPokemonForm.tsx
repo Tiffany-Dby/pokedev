@@ -37,24 +37,30 @@ const SearchPokemonForm = () => {
   }, []);
 
   return (
-    <form className="search-pokemon" method="GET" onSubmit={handleSubmitSearch}>
-      <div className="search-pokemon__inputs">
-        <BaseInput
-          id="search"
-          type="search"
-          list="searchPokemonList"
-          ariaLabel="Rechercher un Pokémon par son nom"
-          placeholder="Rattata, Psykokwak,.. "
-        />
-        <datalist id="searchPokemonList">
-          {pokemons?.map((pokemon) => (
-            <option key={pokemon.id} value={pokemon.name} />
-          ))}
-        </datalist>
-        <BaseButton type="submit" btnValue="Rechercher" />
-      </div>
-      {notFound && <p className="search-pokemon--error error">{notFound}</p>}
-    </form>
+    <div className="search-pokemon__wrapper">
+      <form
+        className="search-pokemon"
+        method="GET"
+        onSubmit={handleSubmitSearch}
+      >
+        <div className="search-pokemon__inputs">
+          <BaseInput
+            id="search"
+            type="search"
+            list="searchPokemonList"
+            ariaLabel="Rechercher un Pokémon par son nom"
+            placeholder="Rattata, Psykokwak,.. "
+          />
+          <datalist id="searchPokemonList">
+            {pokemons?.map((pokemon) => (
+              <option key={pokemon.id} value={pokemon.name} />
+            ))}
+          </datalist>
+          <BaseButton type="submit" btnValue="Rechercher" />
+        </div>
+        {notFound && <p className="search-pokemon--error error">{notFound}</p>}
+      </form>
+    </div>
   );
 };
 

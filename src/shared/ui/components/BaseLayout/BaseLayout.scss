@@ -23,6 +23,12 @@
     }
   }
 
+  &__links {
+    @include flex;
+    @include pos($jc: "space-between");
+    width: 100%;
+  }
+
   &__container {
     @include pos($jc: "space-between");
     row-gap: 1rem;
@@ -35,17 +41,32 @@
   }
 
   &__nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
     width: 100%;
+    background-color: rgba(1, 1, 1, 0.85);
+    padding: var(--padding-l);
+    transition: right 0.5s ease-in-out;
+    backdrop-filter: blur(4px);
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 680px) {
+      position: static;
+      z-index: 0;
+      background-color: transparent;
       width: fit-content;
+      padding: 0;
+    }
+
+    &--open {
+      right: 0;
     }
 
     ul {
       gap: 2rem;
       @include pos;
 
-      @media screen and (min-width: 420px) {
+      @media screen and (min-width: 680px) {
         @include pos($jc: "space-between");
 
         flex-direction: row;
@@ -57,22 +78,16 @@
   &__link {
     text-decoration: none;
     color: var(--secondary);
-    transition: opacity 0.3s ease;
+    transition: color 0.3s ease;
 
     &:hover {
-      opacity: 0.6;
+      color: var(--white);
     }
   }
 
   .active {
     font-weight: var(--fw-semi-bold);
     color: var(--accent);
-  }
-
-  div:has(> .search-pokemon) {
-    width: 100%;
-    display: flex;
-    justify-content: end;
   }
 }
 
