@@ -1,9 +1,11 @@
 @use "../../../../shared/assets/styles/mixins" as *;
 
 .search-pokemon {
-  display: flex;
-  border: 1px solid var(--black);
-  border-radius: var(--radius-l);
+  &__inputs {
+    display: flex;
+    border: 1px solid var(--black);
+    border-radius: var(--radius-l);
+  }
 
   .input {
     border-top-right-radius: 0;

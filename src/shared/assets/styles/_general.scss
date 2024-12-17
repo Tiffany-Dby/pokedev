@@ -74,3 +74,10 @@ a {
   object-fit: cover;
   display: block;
 }
+
+.error {
+  color: var(--danger);
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--font-label);
+  text-shadow: 1px 1px 2px var(--black);
+}

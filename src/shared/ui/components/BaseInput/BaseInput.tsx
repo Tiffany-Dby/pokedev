@@ -6,6 +6,7 @@ const BaseInput = ({
   label,
   type = "text",
   ariaLabel,
+  list,
   placeholder,
 }: BaseInputProps) => {
   return (
@@ -20,6 +21,7 @@ const BaseInput = ({
         type={type}
         name={id}
         id={id}
+        list={list}
         aria-label={ariaLabel}
         placeholder={placeholder}
       />
