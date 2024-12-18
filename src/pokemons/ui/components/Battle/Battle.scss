@@ -69,7 +69,16 @@
     grid-template-rows: repeat(4, 1fr);
     display: grid;
     height: 385px;
-    background-color: var(--tertiary);
+    border-radius: var(--radius-m);
+    background: rgb(218, 243, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(150, 218, 255, 1) 0%,
+      rgba(218, 243, 255, 1) 24%,
+      rgb(43, 59, 43) 28%,
+      rgb(78, 128, 78) 60%,
+      rgb(120, 200, 120) 80%
+    );
 
     &__shadow {
       z-index: 1;
@@ -182,8 +191,8 @@
     &-tray {
       justify-self: center;
       align-self: center;
-      background-color: rgb(127, 152, 211);
-      border: 8px solid rgb(163, 186, 239);
+      background-color: rgb(166, 132, 90);
+      border: 8px solid rgb(220, 186, 145);
       border-radius: 150%;
       width: 90%;
       max-height: 70px;
