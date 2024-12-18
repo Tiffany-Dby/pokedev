@@ -67,15 +67,17 @@
 
   &__back {
     grid-area: 1 / 1;
-    display: flex;
+    display: grid;
     @include pos;
     border: solid 8px rgb(90, 131, 226);
 
     &::after {
       content: "";
+      grid-area: 1 / 1;
       display: block;
       width: 96px;
       height: 96px;
+      margin: 0 auto;
       background: radial-gradient(
           var(--white) 8px,
           var(--black) 8.5px 9px,
@@ -93,6 +95,25 @@
       border: 4px solid var(--black);
       box-shadow: inset -8px -4px 0 0 rgba(0, 0, 0, 0.2);
       animation: shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0.5s 3;
+    }
+
+    > div {
+      grid-area: 1 / 1;
+      align-self: start;
+      @include flex;
+      @include pos;
+      height: calc(100% / 3);
+      text-align: center;
+
+      &:nth-child(2) {
+        align-self: end;
+        transform: rotate(180deg);
+      }
+
+      p {
+        @include pokemonFont(1.5px, rgb(90, 131, 226));
+        font-size: var(--font-size-5xl);
+      }
     }
   }
 

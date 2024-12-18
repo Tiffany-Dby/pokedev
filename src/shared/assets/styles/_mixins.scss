@@ -30,3 +30,9 @@
     border-color: #{$borderColor};
   }
 }
+
+@mixin pokemonFont($strokeWidth: 1px, $strokeColor: var(--primary)) {
+  font-family: "Pokemon Solid";
+  color: var(--accent);
+  -webkit-text-stroke: #{$strokeWidth} #{$strokeColor};
+}

@@ -31,7 +31,7 @@ section {
   > div[class$="__container"] {
     @include container;
     @include flex("column", "nowrap");
-    gap: 1.5rem;
+    gap: 3rem;
   }
 }
 
@@ -46,7 +46,8 @@ p {
 }
 
 h1 {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-5xl);
+  @include pokemonFont;
 }
 
 h2 {

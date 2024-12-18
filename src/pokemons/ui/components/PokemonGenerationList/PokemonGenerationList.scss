@@ -10,28 +10,47 @@
 
   &__generations {
     gap: 2rem;
-
-    a {
-      color: var(--black);
-    }
   }
 
   &__generation {
     gap: 1rem;
+
+    h3 {
+      @include flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      text-transform: uppercase;
+
+      span {
+        @include pokemonFont;
+      }
+    }
   }
 
   &__pokemons {
     @include flex;
-    @include pos;
-    column-gap: 1rem;
-    row-gap: 2rem;
+    gap: 2rem;
 
-    @media screen and (min-width: 490px) {
-      justify-content: space-evenly;
-    }
+    > a {
+      display: flex;
+      color: var(--black);
 
-    @media screen and (min-width: 710px) {
-      justify-content: space-between;
+      @media screen and (min-width: 485px) {
+        max-width: calc(100% / 3 - 2rem);
+      }
+
+      @media screen and (min-width: 640px) {
+        max-width: calc(100% / 4 - 2rem);
+      }
+
+      @media screen and (min-width: 795px) {
+        max-width: calc(100% / 5 - 2rem);
+      }
+
+      &,
+      > article {
+        flex: 1 0;
+      }
     }
   }
 }

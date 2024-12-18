@@ -60,7 +60,14 @@ const PokemonCard = ({ pokemon }: { pokemon: PokemonAPI }) => {
         </ul>
         <Link to={`${APP_ROUTES.POKEMONS}/${pokemon.id}`}>Détails</Link>
       </div>
-      <div className="pokemon__back"></div>
+      <div className="pokemon__back">
+        <div>
+          <p>Pokémon</p>
+        </div>
+        <div>
+          <p>Pokémon</p>
+        </div>
+      </div>
     </article>
   );
 };

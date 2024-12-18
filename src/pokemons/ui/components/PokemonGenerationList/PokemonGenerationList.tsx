@@ -18,7 +18,9 @@ const PokemonGenerationList = () => {
 
       {generations?.map((generation, index) => (
         <section className="pokemons__generation" key={index}>
-          <h3>Generation {index + 1}</h3>
+          <h3>
+            Gen <span>{index + 1}</span>
+          </h3>
           <div className="pokemons__pokemons">
             {generation.map((pokemon) => (
               <Link

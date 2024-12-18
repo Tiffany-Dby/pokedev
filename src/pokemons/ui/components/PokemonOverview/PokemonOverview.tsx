@@ -20,7 +20,7 @@ const PokemonOverview = ({
         />
       </div>
       <div className="pokemon-overview__text">
-        <h3>{pokemon.name}</h3>
+        <h4>{pokemon.name}</h4>
       </div>
     </article>
   );

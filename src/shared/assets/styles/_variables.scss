@@ -1,3 +1,13 @@
+// FONTS
+@font-face {
+  font-family: "Pokemon Solid";
+  src: url(../../../pokemons/assets/fonts/pokemon/PokemonSolid.ttf)
+    format("truetype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   // Colors
   --primary: rgb(42, 75, 151);
@@ -39,6 +49,7 @@
   --font-size-m: calc(1.4rem + 0.4vmin);
   --font-size-l: calc(1.6rem + 0.4vmin);
   --font-size-xl: calc(1.8rem + 0.4vmin);
+  --font-size-5xl: calc(2.6rem + 0.4vmin);
 
   // Font weight
   --fw-thin: 100;
