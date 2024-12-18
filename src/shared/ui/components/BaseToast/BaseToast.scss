@@ -1,9 +1,9 @@
 @use "../../../../shared/assets/styles/mixins" as *;
 
 .toast {
-  position: absolute;
-  z-index: 5;
-  top: 1rem;
+  position: fixed;
+  z-index: 11;
+  top: 14rem;
   right: 1rem;
   @include flex("column", "nowrap");
   max-width: fit-content;

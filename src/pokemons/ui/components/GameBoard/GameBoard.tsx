@@ -4,6 +4,7 @@ import usePokemonGame from "@/pokemons/hooks/usePokemonGame";
 import GamePokemonSelector from "@/pokemons/ui/components/GamePokemonSelector/GamePokemonSelector";
 import GamePokemonOpponents from "@/pokemons/ui/components/GamePokemonOpponents/GamePokemonOpponents";
 import "./GameBoard.scss";
+import { createPortal } from "react-dom";
 
 const GameBoard = ({
   randomTeam,
@@ -27,12 +28,15 @@ const GameBoard = ({
     <>
       <section className="game-rules">
         <div className="game-rules__container">
-          <BaseToast
-            toast={toast}
-            btnClick={() =>
-              setToast({ title: "", messages: [], isVisible: false })
-            }
-          />
+          {createPortal(
+            <BaseToast
+              toast={toast}
+              btnClick={() =>
+                setToast({ title: "", messages: [], isVisible: false })
+              }
+            />,
+            document.body
+          )}
           <h1>Game</h1>
           <article>
             <h3>Présentation</h3>
