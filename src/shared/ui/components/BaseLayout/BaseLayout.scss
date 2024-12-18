@@ -42,12 +42,13 @@
 
   &__nav {
     position: absolute;
-    top: 100%;
-    right: -100%;
+    z-index: 0;
+    top: -300%;
+    right: 0;
     width: 100%;
     background-color: rgba(1, 1, 1, 0.85);
     padding: var(--padding-l);
-    transition: right 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
     backdrop-filter: blur(4px);
 
     @media screen and (min-width: 680px) {
@@ -59,7 +60,7 @@
     }
 
     &--open {
-      right: 0;
+      top: 100%;
     }
 
     ul {
