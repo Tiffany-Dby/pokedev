@@ -13,6 +13,10 @@
   background-color: rgb(255, 235, 235);
   border: 1px solid rgba(255, 104, 104, 0.25);
 
+  @media screen and (min-width: 800px) {
+    right: calc(50% - 400px + var(--padding-l));
+  }
+
   &__header {
     @include flex($wrap: "nowrap");
     @include pos("space-between");
